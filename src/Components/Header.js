@@ -3,11 +3,12 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="lg:hero h-[500px] bg-emerald-600">
+      <div className="lg:hero h-[500px] bg-amber-600">
         <div className="hero-content text-center flex-col lg:mt-8">
           <div className="text-white">
-            <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold">
-              Hello there, The Simplest Way To Incorporate Your Company In India.
+            <h1 className="lg:text-5xl md:text-5xl text-3xl font-bold">
+              Hello there, The Simplest Way To Incorporate <br />
+              Your Company In India.
             </h1>
             <p className="py-6">Begin your journey as a business owner with us</p>
             <div className="bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-between w-full lg:w-1/3 mx-auto">
@@ -23,18 +24,27 @@ const Header = () => {
 
             <div>
               <div className="flex justify-center items-center my-5">
-                <p className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200">
+                <label
+                  htmlFor="gst"
+                  className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200"
+                >
                   <span className="font-bold">GST Registration</span> <br />
                   $999 / <span className="text-xs">Excl GST</span>
-                </p>
-                <p className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200">
+                </label>
+                <label
+                  htmlFor="gst"
+                  className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200"
+                >
                   <span className="font-bold">GST Registration</span> <br />
                   $999 / <span className="text-xs">Excl GST</span>
-                </p>
-                <p className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200">
+                </label>
+                <label
+                  htmlFor="gst"
+                  className="border p-3 mx-2 rounded-xl hover:bg-indigo-300 hover:cursor-pointer border-white hover:border-0 hover:text-white hover:duration-200"
+                >
                   <span className="font-bold">GST Registration</span> <br />
                   $999 / <span className="text-xs">Excl GST</span>
-                </p>
+                </label>
               </div>
             </div>
             <p className="text-center">Rated 4.8 out of 5 based on Google 1320 reviews</p>
@@ -108,6 +118,20 @@ const Header = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Put this part before </body> tag */}
+        <input type="checkbox" id="gst" className="modal-toggle" />
+        <div className="modal bg-slate-200 bg-opacity-50">
+          <div className="modal-box relative">
+            <label htmlFor="gst" className="btn btn-sm btn-circle absolute right-2 top-2">
+              ✕
+            </label>
+            <h3 className="text-lg font-bold">GST Registration</h3>
+            <p className="py-4">
+              Your documents, contracts, and registrations handled by expert lawyers.
+            </p>
           </div>
         </div>
       </div>
